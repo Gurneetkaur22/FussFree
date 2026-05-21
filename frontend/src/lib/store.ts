@@ -1,6 +1,6 @@
 import { Complaint, Contact } from "./types";
 
-const API = "http://localhost:5000/api";
+const API = "https://fussfree-2.onrender.com/api";
 
 function getToken(): string | null {
   return localStorage.getItem("fussfree_token");
