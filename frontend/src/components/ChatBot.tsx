@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { MessageCircle, X, Send, Bot, User, RefreshCw, Minimize2, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { API_URL } from "@/lib/apiConfig";
 
-const API = "http://localhost:5000/api";
+const API = API_URL;
 
 interface ChatMessage {
   id: string;

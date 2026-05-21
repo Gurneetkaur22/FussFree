@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Trash2, Shield, ShieldOff, Users } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/lib/authContext";
+import { API_URL } from "@/lib/apiConfig";
 
 const ADMIN_NAV = [
   { label: "Dashboard", path: "/admin" },
@@ -23,7 +24,7 @@ interface ManagedUser {
   created_at: string;
 }
 
-const API = "http://localhost:5000/api";
+const API = API_URL;
 
 const AdminUsers = () => {
   const { token, user: currentUser } = useAuth();
