@@ -24,16 +24,18 @@ const PORT = process.env.PORT || 5000;
 //   }
 // }));
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-     "https://fuss-free.vercel.app",
-     "https://fuss-free-gkearq046-gurneetkaur22s-projects.vercel.app"
-  ],
-  methods: ["GET", "POST", "PATCH", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: [
+//     "http://localhost:5173",
+//      "https://fuss-free.vercel.app",
+//      "https://fuss-free-gkearq046-gurneetkaur22s-projects.vercel.app"
+//   ],
+//   methods: ["GET", "POST", "PATCH", "DELETE"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+//   credentials: true
+// }));
+
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
